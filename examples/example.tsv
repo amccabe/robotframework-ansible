@@ -1,0 +1,17 @@
+*Setting*
+Library	lib/AnsibleLibrary.py
+
+*Test Case*
+# Run this from the top level directory of the repository
+Sample Testcase
+	${cfg}=	Get Default Ansible Params
+	Log	${cfg}
+	${cfg}=	Set Ansible Param	${cfg}	"host_list"	"./examples/hosts"
+	${cfg}=	Set Ansible Param	${cfg}	"module_name"	"ping"
+	${cfg}=	Set Ansible Param	${cfg}	"transport"	"local"
+	${res}=	Run Ansible Extended Params	${cfg}
+	Ansible Result Host Is Contacted	${res}	"localhost"
+	Ansible Result Host is Successful	${res}	"localhost"
+	${msg}=	Ansible Result Host Message	${res}	"localhost"
+	Log	${msg}
+

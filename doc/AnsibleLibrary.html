@@ -1,0 +1,92 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module AnsibleLibrary</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>AnsibleLibrary</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/amccabe/git/robotframework-ansible/lib/AnsibleLibrary.py">/home/amccabe/git/robotframework-ansible/lib/AnsibleLibrary.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ansible.html">ansible</a><br>
+</td><td width="25%" valign=top><a href="robot.utils.asserts.html">robot.utils.asserts</a><br>
+</td><td width="25%" valign=top><a href="robot.api.logger.html">robot.api.logger</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="AnsibleLibrary.html#AnsibleLibrary">AnsibleLibrary</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="AnsibleLibrary">class <strong>AnsibleLibrary</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="AnsibleLibrary-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="AnsibleLibrary-ansible_result_host_is_contacted"><strong>ansible_result_host_is_contacted</strong></a>(self, result, host)</dt><dd><tt>Assert&nbsp;a&nbsp;host&nbsp;did&nbsp;get&nbsp;a&nbsp;response,&nbsp;but&nbsp;not&nbsp;testing&nbsp;if&nbsp;it&nbsp;succeeded<br>
+@param&nbsp;result:&nbsp;result&nbsp;returned&nbsp;from&nbsp;Runner.run()<br>
+@param&nbsp;host:&nbsp;host&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="AnsibleLibrary-ansible_result_host_is_dark"><strong>ansible_result_host_is_dark</strong></a>(self, result, host)</dt><dd><tt>Assert&nbsp;a&nbsp;host&nbsp;did&nbsp;not&nbsp;get&nbsp;a&nbsp;response<br>
+@param&nbsp;result:&nbsp;result&nbsp;returned&nbsp;from&nbsp;Runner.run()<br>
+@param&nbsp;host:&nbsp;host&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="AnsibleLibrary-ansible_result_host_is_successful"><strong>ansible_result_host_is_successful</strong></a>(self, result, host)</dt><dd><tt>Assert&nbsp;a&nbsp;host&nbsp;got&nbsp;a&nbsp;response&nbsp;and&nbsp;the&nbsp;module&nbsp;executed&nbsp;successfully<br>
+@param&nbsp;result:&nbsp;result&nbsp;returned&nbsp;from&nbsp;Runner.run()<br>
+@param&nbsp;host:&nbsp;host&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="AnsibleLibrary-ansible_result_host_message"><strong>ansible_result_host_message</strong></a>(self, result, host)</dt><dd><tt>Get&nbsp;the&nbsp;message&nbsp;(if&nbsp;one&nbsp;exists,&nbsp;otherwise&nbsp;empty&nbsp;string)&nbsp;whether&nbsp;the&nbsp;<br>
+module&nbsp;executed&nbsp;successfully&nbsp;or&nbsp;not.<br>
+@param&nbsp;result:&nbsp;result&nbsp;returned&nbsp;from&nbsp;Runner.run()<br>
+@param&nbsp;host:&nbsp;host&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="AnsibleLibrary-get_default_ansible_params"><strong>get_default_ansible_params</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;default&nbsp;parameters&nbsp;to&nbsp;the&nbsp;runner,&nbsp;compatible&nbsp;<br>
+with&nbsp;Ansible&nbsp;0.7.1</tt></dd></dl>
+
+<dl><dt><a name="AnsibleLibrary-run_ansible_basic"><strong>run_ansible_basic</strong></a>(self, pattern, forks, moduleName, moduleArgs)</dt><dd><tt>Run&nbsp;Ansible&nbsp;in&nbsp;a&nbsp;basic&nbsp;mode,&nbsp;which&nbsp;only&nbsp;allows&nbsp;the&nbsp;user&nbsp;to&nbsp;specify<br>
+host&nbsp;pattern,&nbsp;number&nbsp;of&nbsp;forks,&nbsp;and&nbsp;the&nbsp;module&nbsp;name/args.<br>
+@param&nbsp;pattern:&nbsp;host&nbsp;name&nbsp;patter,&nbsp;see&nbsp;Ansible&nbsp;docs&nbsp;for&nbsp;further&nbsp;info<br>
+@param&nbsp;forks:&nbsp;number&nbsp;of&nbsp;concurrent&nbsp;hosts,&nbsp;see&nbsp;Ansible&nbsp;docs...<br>
+@param&nbsp;moduleName:&nbsp;name&nbsp;of&nbsp;the&nbsp;module&nbsp;to&nbsp;run<br>
+@param&nbsp;moduleArgs:&nbsp;arguments&nbsp;to&nbsp;the&nbsp;module</tt></dd></dl>
+
+<dl><dt><a name="AnsibleLibrary-run_ansible_extended_params"><strong>run_ansible_extended_params</strong></a>(self, paramDict)</dt><dd><tt>Run&nbsp;Ansible&nbsp;by&nbsp;passing&nbsp;Runner&nbsp;a&nbsp;dict&nbsp;of&nbsp;parameters<br>
+@param&nbsp;paramDict:</tt></dd></dl>
+
+<dl><dt><a name="AnsibleLibrary-set_ansible_param"><strong>set_ansible_param</strong></a>(self, params, k, v)</dt><dd><tt>Override&nbsp;or&nbsp;set&nbsp;a&nbsp;key&nbsp;in&nbsp;a&nbsp;dictionary&nbsp;containing&nbsp;ansible&nbsp;parameters<br>
+@param&nbsp;params:&nbsp;the&nbsp;dictionary&nbsp;of&nbsp;Ansible&nbsp;Runner&nbsp;parameters<br>
+@param&nbsp;k:&nbsp;key&nbsp;name<br>
+@param&nbsp;v:&nbsp;destired&nbsp;key&nbsp;value</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
