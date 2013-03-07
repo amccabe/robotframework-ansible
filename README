@@ -1,1 +1,12 @@
-A keyword library for the popular Ansible configuration and orchestration tool.
+A Robot Framework keyword library for the popular Ansible configuration and 
+orchestration tool.
+
+The example test suite (examples/example.tsv) runs the ping module with local 
+transport using a hosts file containing a single entry for localhost 
+(examples/hosts).
+
+To run the example, make sure you have installed Robot Framework and run 
+"pybot ./examples/example.tsv" from your checkout of this repository.  You can
+see the results of the test by opening the results.html file that is created in
+the browser of your choice.
+
